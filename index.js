@@ -4,7 +4,7 @@ const mongoClient = require("mongodb", { useUnifiedTopology: true })
 
 const express = require("express");
 const app = express();
-const port = process.env.port || 4000;
+const port = process.env.Port || 4000;
 // const url = "mongodb://127.0.0.1:27017";
 const url = process.env.dburl;
 app.use(express.json());
