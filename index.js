@@ -4,7 +4,7 @@ const mongoClient = require("mongodb", { useUnifiedTopology: true })
 
 const express = require("express");
 const app = express();
-
+const port = process.env.port || 4000;
 // const url = "mongodb://127.0.0.1:27017";
 const url = process.env.dburl;
 app.use(express.json());
@@ -95,6 +95,6 @@ app.get("/student-list/:name", async (req, res) => {
     console.error(error);
   }
 });
-app.listen(4000, () => {
-  console.log("Port 4000");
+app.listen(port, () => {
+  console.log(`Port ${port}`);
 });
